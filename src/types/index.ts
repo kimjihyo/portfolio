@@ -22,3 +22,8 @@ export interface PortfolioItemProps {
   onPreviewButtonPress: () => void;
   onVisitSitePress: () => void;
 }
+
+export interface NavigationItemProp {
+  name: string;
+  onPress: () => void;
+}

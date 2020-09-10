@@ -16,18 +16,21 @@ const Link = styled.a`
   margin: 0 10px;
   color: gray;
   text-decoration: none;
+  font-size: 13px;
 `;
 
 const FooterText = styled.p`
   color: gainsboro;
   text-align: center;
   margin-top: 20px;
+  font-size: 13px;
 `;
 
 const Footer = () => {
   return (
     <Wrapper>
       <Links>
+        <Link href="#">Email</Link>
         <Link href="#">Linkedin</Link>
         <Link href="#">Facebook</Link>
         <Link href="#">GitHub</Link>

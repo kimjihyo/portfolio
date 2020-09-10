@@ -7,33 +7,54 @@ import { colors } from '../constants';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 450px;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 450px;
   border-bottom: solid 1px gainsboro;
+  @media (max-width: 1000px) {
+    padding: 40px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ImageColumn = styled.div`
-  width: 40%;
-  height: 70%;
+  object-fit: scale-down;
+  margin: auto 0;
+  max-width: 350px;
+  max-height: 350px;
+  @media (max-width: 1000px) {
+    padding-bottom: 20px;
+  }
 `;
 
 const DescriptionColumn = styled.div`
   display: flex;
+  margin: auto 0;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 40%;
-  height: 70%;
+  max-width: 350px;
+  max-height: 350px;
+  margin-left: 60px;
+  @media (max-width: 1000px) {
+    text-align: center;
+    align-items: center;
+    margin-left: 0px;
+  }
 `;
 
 const TitleRow = styled.div`
   display: flex;
   align-items: center;
+  padding-bottom: 20px;
 `;
 
 const Title = styled.div`
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: bolder;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
 `;
 
 const YearBadge = styled.div`
@@ -51,6 +72,11 @@ const YearBadge = styled.div`
 const Description = styled.div`
   color: gray;
   line-height: 1.5;
+  max-width: 500px;
+  padding-bottom: 30px;
+  @media (max-width: 1000px) {
+    font-size: 15px;
+  }
 `;
 
 const Buttons = styled.div`
