@@ -115,7 +115,6 @@ const Header = () => {
           <NavigationButton>SKILLS</NavigationButton>
           <NavigationButton>PORTFOLIO</NavigationButton>
           <NavigationButton>PRICING</NavigationButton>
-          <NavigationButton>한국어</NavigationButton>
         </NavigationButtonsWrapper>
       </Wrapper>
     </Appbar>

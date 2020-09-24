@@ -112,7 +112,10 @@ const Home = () => {
       img: '',
       title: 'BullStock AI',
       description:
-        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+        'BullStock AI is a mobile app that shows predictions for \
+        NASDAQ stock prices written in React Native. I was responsible for \
+        frontend and machine learning part. I utilized a Long Short Term Memory \
+        (LSTM) model to implement the AI that predicts stock prices',
       year: '2020',
       onPreviewButtonPress: () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
@@ -123,9 +126,26 @@ const Home = () => {
     },
     {
       img: '',
-      title: 'Pet Respiratory Rate Analyzer',
+      title: 'Pet Health Analyzer',
       description:
-        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+        'Pet Health Analyzer is a mobile app written in React Native. \
+        Users can record respiratory and heart rates of their pets. \
+        The app shows a graph of the pets health trend and warn users \
+        if heart or respiratory rates are higher than normal.',
+      year: '2020',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'My Portfolio Website',
+      description:
+        'This website is written in React.js with Styled Components, \
+        and hosted in AWS EC2 machine. I update my projects and skills in here.',
       year: '2020',
       onPreviewButtonPress: () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
