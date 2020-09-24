@@ -32,6 +32,7 @@ const IntroWrapper = styled.div`
   padding-bottom: 80px;
   justify-content: center;
   align-items: center;
+  height: 300px;
 `;
 
 const IntroMainText = styled.h1`
@@ -41,6 +42,12 @@ const IntroMainText = styled.h1`
   font-size: 32px;
   line-height: 1.5;
   margin-bottom: 20px;
+  @media (max-width: 1000px) {
+    font-size: 25px;
+  }
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
 `;
 
 const IntroSubText = styled.p`
@@ -50,6 +57,11 @@ const IntroSubText = styled.p`
   max-width: 480px;
   margin-bottom: 30px;
   text-align: center;
+  @media (max-width: 600px) {
+    font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
 
 const GetStartedButton = styled.a`
@@ -105,6 +117,22 @@ const Home = () => {
       title: 'Artificail Intelligence',
       description: 'Get insights into who is browsing your site so that you can make smarter business decisions.',
     },
+    {
+      img: UndrawAI,
+      title: 'Artificail Intelligence',
+      description: 'Get insights into who is browsing your site so that you can make smarter business decisions.',
+    },
+    {
+      img: UndrawDesign,
+      title: 'Web & Mobile Development',
+      description:
+        'Clean, modern designs - optimized for performance, search engines, and converting users to customers.',
+    },
+    {
+      img: UndrawMobile,
+      title: 'Game Development',
+      description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
+    },
   ]);
 
   const [portfolioItems] = React.useState<PortfolioItemProps[]>([
@@ -154,6 +182,34 @@ const Home = () => {
         console.log('Stock Market Predictor iOS App Visit Site Pressed');
       },
     },
+    {
+      img: '',
+      title: 'Grateful Estate Moble App',
+      description:
+        'This website is written in React.js with Styled Components, \
+        and hosted in AWS EC2 machine. I update my projects and skills in here.',
+      year: '2020',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'Gomoku Game',
+      description:
+        'This website is written in React.js with Styled Components, \
+        and hosted in AWS EC2 machine. I update my projects and skills in here.',
+      year: '2020',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
   ]);
 
   return (
@@ -163,7 +219,6 @@ const Home = () => {
         <IntroWrapper>
           <IntroMainText>
             AI RESEARCH & <br /> MOBILE / WEB / GAME DEVELOPMENT
-            {/* AI 리서치 & <br /> 모바일 / 웹 / 게임 개발 */}
           </IntroMainText>
           <IntroSubText>
             {
@@ -171,15 +226,8 @@ const Home = () => {
             If you're a business seeking a web & mobile presence or is looking to hire, \
             contact me here."
             }
-            {/* {
-              '모바일과 웹 개발을 전문으로 하고 있습니다. \
-              프로그래머를 구직중이시거나, 외주를 맡기고 싶으시면 연락주세요.'
-            } */}
           </IntroSubText>
-          <GetStartedButton>
-            {'Get Started'}
-            {/* {'시작하기'} */}
-          </GetStartedButton>
+          <GetStartedButton>{'Get Started'}</GetStartedButton>
         </IntroWrapper>
       </TopSection>
       <ServicesSection>
