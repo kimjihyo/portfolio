@@ -129,8 +129,8 @@ const Header = () => {
       onPress: () => console.log('PORTFOLIO pressed'),
     },
     {
-      name: 'PRICING',
-      onPress: () => console.log('PRICING pressed'),
+      name: 'WORK EXPERIENCE',
+      onPress: () => console.log('WORK EXPERIENCE pressed'),
     },
   ]);
 

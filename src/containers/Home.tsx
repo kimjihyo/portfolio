@@ -80,9 +80,9 @@ const ServicesSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
-  height: 550px;
+  height: 600px;
 `;
 
 const PortfolioSection = styled.div`
@@ -150,11 +150,63 @@ const Home = () => {
       },
     },
     {
-      img: 'dwadw',
+      img: '',
       title: 'Pet Health Monitor',
       description:
         'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
       year: '2020',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'Grateful Estate App',
+      description:
+        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+      year: '2020',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'Realtor.com',
+      description:
+        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+      year: '2019',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'Gomoku Web/Computer App',
+      description:
+        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+      year: '2019',
+      onPreviewButtonPress: () => {
+        console.log('Stock Market Predictor iOS App Preview Pressed');
+      },
+      onVisitSitePress: () => {
+        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+      },
+    },
+    {
+      img: '',
+      title: 'Minesweeper Web Game',
+      description:
+        'A platform for automating data collection and reporting throughout teams, operations and supply chains.',
+      year: '2019',
       onPreviewButtonPress: () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
       },
@@ -179,12 +231,12 @@ const Home = () => {
             contact me here."
             }
           </IntroSubText>
-          <GetStartedButton>{'Get Started'}</GetStartedButton>
+          <GetStartedButton>{'Contact me'}</GetStartedButton>
         </IntroWrapper>
       </TopSection>
       <ServicesSection>
         <Carousel items={serviceItems} />
-        <Button label="Learn More" onClick={() => console.log('Learn More')} />
+        <Button label="Learn More" style={{ marginTop: '20px' }} onClick={() => console.log('Learn More')} />
       </ServicesSection>
       <PortfolioSection>
         <PortfolioSectionTitle>Portfolio</PortfolioSectionTitle>
