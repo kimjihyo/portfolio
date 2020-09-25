@@ -46,7 +46,6 @@ const DescriptionColumn = styled.div`
 const TitleRow = styled.div`
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
 `;
 
 const Title = styled.div`
@@ -84,12 +83,20 @@ const Buttons = styled.div`
   align-items: center;
 `;
 
+const JobTitleText = styled.div`
+  margin-top: 0.25rem;
+  margin-bottom: 0.725rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: ${colors.primaryTextColor};
+`;
+
 const PortfolioItem = (props: PortfolioItemProps) => {
   return (
     <Wrapper>
       <ImageColumn>
         <img
-          src={UndrawNoData}
+          src={props.img !== '' ? props.img : UndrawNoData}
           alt=""
           style={{
             width: '100%',
@@ -102,6 +109,7 @@ const PortfolioItem = (props: PortfolioItemProps) => {
           <Title>{props.title}</Title>
           <YearBadge>{props.year}</YearBadge>
         </TitleRow>
+        <JobTitleText>{props.jobTitle}</JobTitleText>
         <Description>{props.description}</Description>
         <Buttons>
           <Button

@@ -125,11 +125,11 @@ const Header = () => {
       onPress: () => console.log('SKILLS pressed'),
     },
     {
-      name: 'PORTFOLIO',
+      name: 'PROJECTS',
       onPress: () => console.log('PORTFOLIO pressed'),
     },
     {
-      name: 'PRICING',
+      name: 'EXPERIENCE',
       onPress: () => console.log('PRICING pressed'),
     },
   ]);

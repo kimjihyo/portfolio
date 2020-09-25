@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, Carousel, Button, PortfolioItem, Footer } from '../components';
+import { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem } from '../components';
 import UndrawDesign from '../assets/undraw_design_components.svg';
 import UndrawMobile from '../assets/undraw_mobile_images.svg';
 import UndrawAI from '../assets/undraw_artificial_intelligence.svg';
-import { CarouselItemProps, PortfolioItemProps } from '../types';
+import { CarouselItemProps, PortfolioItemProps, ProjectItemProps } from '../types';
 import { colors } from '../constants';
 
 const Wrapper = styled.div``;
@@ -95,8 +95,43 @@ const PortfolioSection = styled.div`
 const PortfolioSectionTitle = styled.h1`
   color: #00000055;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 24px;
   text-align: center;
+`;
+
+const ProjectSection = styled.div`
+  border-top-width: 1px;
+  border-top-color: gainsboro;
+  border-top-style: solid;
+  padding-top: 60px;
+`;
+
+const ProjectSectionTitle = styled.h1`
+  color: #00000055;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+`;
+
+const ProjectItemGrid = styled.div`
+  width: 88%;
+  max-width: 1600px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 1rem;
+  row-gap: 3rem;
+  padding: 0px 10px;
+  @media (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const Home = () => {
@@ -135,60 +170,82 @@ const Home = () => {
     },
   ]);
 
-  const [portfolioItems] = React.useState<PortfolioItemProps[]>([
+  const [projectItems] = React.useState<ProjectItemProps[]>([
     {
-      img: '',
+      img: require('../assets/bullstock_graph.png'),
       title: 'BullStock AI',
       description:
         'BullStock AI is a mobile app that shows predictions for \
         NASDAQ stock prices written in React Native. I was responsible for \
         frontend and machine learning part. I utilized a Long Short Term Memory \
         (LSTM) model to implement the AI that predicts stock prices',
-      year: '2020',
-      onPreviewButtonPress: () => {
-        console.log('Stock Market Predictor iOS App Preview Pressed');
-      },
-      onVisitSitePress: () => {
-        console.log('Stock Market Predictor iOS App Visit Site Pressed');
-      },
+      duration: '2020.05 ~ 2020.09',
+      shortDescription: 'Outsourcing',
+      type: 'Mobile Application',
+      tag: ['Full-Stack', 'React Native', 'AI'],
     },
     {
-      img: '',
+      img: require('../assets/iro.png'),
       title: 'Pet Health Analyzer',
       description:
         'Pet Health Analyzer is a mobile app written in React Native. \
         Users can record respiratory and heart rates of their pets. \
         The app shows a graph of the pets health trend and warn users \
         if heart or respiratory rates are higher than normal.',
-      year: '2020',
-      onPreviewButtonPress: () => {
-        console.log('Stock Market Predictor iOS App Preview Pressed');
-      },
-      onVisitSitePress: () => {
-        console.log('Stock Market Predictor iOS App Visit Site Pressed');
-      },
+      duration: '2020.05 ~ 2020.06',
+      shortDescription: 'Outsourcing',
+      type: 'Mobile Application',
+      tag: ['Full-Stack', 'React-Native'],
     },
     {
-      img: '',
+      img: require('../assets/portfolio_website.png'),
       title: 'My Portfolio Website',
       description:
         'This website is written in React.js with Styled Components, \
         and hosted in AWS EC2 machine. I update my projects and skills in here.',
-      year: '2020',
-      onPreviewButtonPress: () => {
-        console.log('Stock Market Predictor iOS App Preview Pressed');
-      },
-      onVisitSitePress: () => {
-        console.log('Stock Market Predictor iOS App Visit Site Pressed');
-      },
+      duration: '2020.05 ~ Now',
+      shortDescription: 'Personal Project',
+      type: 'Web Application',
+      tag: ['Frontend', 'React.js'],
     },
     {
-      img: '',
+      img: require('../assets/grateful.png'),
       title: 'Grateful Estate Moble App',
       description:
-        'This website is written in React.js with Styled Components, \
-        and hosted in AWS EC2 machine. I update my projects and skills in here.',
-      year: '2020',
+        'Grateful Estate is a subscription-based service that helps \
+        you or your loved ones manage their end of life affairs. \
+        The service helps users connect with their loved ones and develop \
+        a Gratitude Register to keep what they are grateful for in mind.',
+      duration: '2020.05 ~ 2020.06',
+      shortDescription: 'Outsourcing',
+      type: 'Mobile Application',
+      tag: ['Frontent', 'Android'],
+      imgShouldCover: false,
+    },
+    {
+      img: require('../assets/gomoku_cropped.png'),
+      title: 'Gomoku',
+      description:
+        'Gomoku, also called Five in a Row, is an abbstract strategy board game \
+         It is traditionally payed with Go pieces on a Go board. I created the game \
+         with C++ and SFML, which is a wrapper library for OpenGL.',
+      duration: '2020.01 ~ 2020.02',
+      shortDescription: 'Personal Project',
+      type: 'PC Game',
+      tag: ['C++/SFML', 'Game'],
+    },
+  ]);
+
+  const [portfolioItems] = React.useState<PortfolioItemProps[]>([
+    {
+      img: require('../assets/realtor_logo.png'),
+      title: 'Realtor.com',
+      description:
+        'Realtor.com is a real estate listings website operated \
+        by the News Corporation subsidiary Move, Inc. \
+        Worked as a Co-op Software Enginner in Mobile Department.',
+      year: '2019',
+      jobTitle: 'Co-op Software Engineer',
       onPreviewButtonPress: () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
       },
@@ -197,12 +254,14 @@ const Home = () => {
       },
     },
     {
-      img: '',
-      title: 'Gomoku Game',
+      img: require('../assets/base_logo.jpg'),
+      title: 'Base Student Network',
       description:
-        'This website is written in React.js with Styled Components, \
-        and hosted in AWS EC2 machine. I update my projects and skills in here.',
+        'Base BC Students Network is an app for students to build their \
+        official networking/portfolio base by chatting and collaborating \
+        with classmates and students from different schools',
       year: '2020',
+      jobTitle: 'Full-Stack Developer',
       onPreviewButtonPress: () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
       },
@@ -211,6 +270,32 @@ const Home = () => {
       },
     },
   ]);
+
+  const [numberOfEmptyProjectItems, setNumberOfEmptyProjectItems] = React.useState(0);
+
+  const calculateNumberOfEmptyProjectItems = (width: number) => {
+    if (width >= 1600) {
+      return 0;
+    } else if (width < 1600 && width >= 1200) {
+      return 3;
+    } else if (width < 1200 && width >= 700) {
+      return 1;
+    } else {
+      return 1;
+    }
+  };
+
+  React.useEffect(() => {
+    let n = calculateNumberOfEmptyProjectItems(window.innerWidth);
+    setNumberOfEmptyProjectItems(n);
+    window.addEventListener('resize', () => {
+      const newN = calculateNumberOfEmptyProjectItems(window.innerWidth);
+      if (newN !== n) {
+        n = newN;
+        setNumberOfEmptyProjectItems(n);
+      }
+    });
+  }, []);
 
   return (
     <Wrapper>
@@ -234,8 +319,19 @@ const Home = () => {
         <Carousel items={serviceItems} />
         <Button label="Learn More" onClick={() => console.log('Learn More')} />
       </ServicesSection>
+      <ProjectSection>
+        <ProjectSectionTitle>Recent Projects</ProjectSectionTitle>
+        <ProjectItemGrid>
+          {projectItems.map((item, i) => (
+            <ProjectItem key={i} {...item} />
+          ))}
+          {[...Array(numberOfEmptyProjectItems)].map((e, i) => (
+            <EmptyProjectItem key={i} />
+          ))}
+        </ProjectItemGrid>
+      </ProjectSection>
       <PortfolioSection>
-        <PortfolioSectionTitle>Portfolio</PortfolioSectionTitle>
+        <PortfolioSectionTitle>Work Experience</PortfolioSectionTitle>
         {portfolioItems.map((item, i) => (
           <PortfolioItem key={i} {...item} />
         ))}
