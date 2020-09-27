@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem } from '../components';
-import UndrawDesign from '../assets/undraw_design_components.svg';
-import UndrawMobile from '../assets/undraw_mobile_images.svg';
-import UndrawAI from '../assets/undraw_artificial_intelligence.svg';
 import { CarouselItemProps, PortfolioItemProps, ProjectItemProps } from '../types';
 import { colors } from '../constants';
 
@@ -137,35 +134,18 @@ const ProjectItemGrid = styled.div`
 const Home = () => {
   const [serviceItems] = React.useState<CarouselItemProps[]>([
     {
-      img: UndrawDesign,
-      title: 'Web & Mobile Development',
-      description:
-        'Clean, modern designs - optimized for performance, search engines, and converting users to customers.',
-    },
-    {
-      img: UndrawMobile,
-      title: 'Game Development',
+      img: require('../assets/react.png'),
+      title: 'React/React Native',
       description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
     },
     {
-      img: UndrawAI,
-      title: 'Artificail Intelligence',
-      description: 'Get insights into who is browsing your site so that you can make smarter business decisions.',
+      img: require('../assets/node.png'),
+      title: 'Node.js/Express',
+      description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
     },
     {
-      img: UndrawAI,
-      title: 'Artificail Intelligence',
-      description: 'Get insights into who is browsing your site so that you can make smarter business decisions.',
-    },
-    {
-      img: UndrawDesign,
-      title: 'Web & Mobile Development',
-      description:
-        'Clean, modern designs - optimized for performance, search engines, and converting users to customers.',
-    },
-    {
-      img: UndrawMobile,
-      title: 'Game Development',
+      img: require('../assets/xcode.png'),
+      title: 'iOS Development',
       description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
     },
   ]);
@@ -196,6 +176,14 @@ const Home = () => {
       shortDescription: 'Outsourcing',
       type: 'Mobile Application',
       tag: ['Full-Stack', 'React-Native'],
+      buttons: [
+        {
+          title: 'Google Play Store',
+          onClick: () => {
+            window.open('https://play.google.com/store/apps/details?id=com.animalheartratemonitoringapp&hl=ko');
+          },
+        },
+      ],
     },
     {
       img: require('../assets/portfolio_website.png'),
@@ -207,6 +195,20 @@ const Home = () => {
       shortDescription: 'Personal Project',
       type: 'Web Application',
       tag: ['Frontend', 'React.js'],
+      buttons: [
+        {
+          title: 'View the Website',
+          onClick: () => {
+            window.open('https://wwwn.naver.com');
+          },
+        },
+        {
+          title: 'View Source Code',
+          onClick: () => {
+            window.open('https://wwwn.naver.com');
+          },
+        },
+      ],
     },
     {
       img: require('../assets/grateful.png'),
@@ -233,6 +235,60 @@ const Home = () => {
       shortDescription: 'Personal Project',
       type: 'PC Game',
       tag: ['C++/SFML', 'Game'],
+      buttons: [
+        {
+          title: 'View Source Code',
+          onClick: () => {
+            window.open('https://jijuntay-minesweeper.web.app/');
+          },
+        },
+      ],
+    },
+    {
+      img: require('../assets/minesweeper.png'),
+      title: 'Minesweeper Web Game',
+      description:
+        'Gomoku, also called Five in a Row, is an abbstract strategy board game \
+         It is traditionally payed with Go pieces on a Go board. I created the game \
+         with C++ and SFML, which is a wrapper library for OpenGL.',
+      duration: '2018.09 ~ 2018.09',
+      shortDescription: 'Personal Project',
+      type: 'Web Game',
+      tag: ['Plain JS', 'Web Game'],
+      buttons: [
+        {
+          title: 'Play Game',
+          onClick: () => {
+            window.open('https://jijuntay-minesweeper.web.app/');
+          },
+        },
+        {
+          title: 'View Source Code',
+          onClick: () => {
+            window.open('https://jijuntay-minesweeper.web.app/');
+          },
+        },
+      ],
+    },
+    {
+      img: require('../assets/memory_game.png'),
+      title: 'Memory Game',
+      description:
+        'Gomoku, also called Five in a Row, is an abbstract strategy board game \
+         It is traditionally payed with Go pieces on a Go board. I created the game \
+         with C++ and SFML, which is a wrapper library for OpenGL.',
+      duration: '2018.09 ~ 2018.09',
+      shortDescription: 'Personal Project',
+      type: 'Web Game',
+      tag: ['Plain JS', 'Web Game'],
+      buttons: [
+        {
+          title: 'Play Game',
+          onClick: () => {
+            window.open('https://www.naver.com');
+          },
+        },
+      ],
     },
   ]);
 
@@ -275,13 +331,13 @@ const Home = () => {
 
   const calculateNumberOfEmptyProjectItems = (width: number) => {
     if (width >= 1600) {
-      return 0;
+      return projectItems.length % 5 === 0 ? projectItems.length % 5 : 5 - (projectItems.length % 5);
     } else if (width < 1600 && width >= 1200) {
-      return 3;
+      return projectItems.length % 4 === 0 ? projectItems.length % 4 : 4 - (projectItems.length % 4);
     } else if (width < 1200 && width >= 700) {
-      return 1;
+      return projectItems.length % 3 === 0 ? projectItems.length % 3 : 3 - (projectItems.length % 3);
     } else {
-      return 1;
+      return projectItems.length % 2 === 0 ? projectItems.length % 2 : 2 - (projectItems.length % 2);
     }
   };
 
@@ -312,7 +368,7 @@ const Home = () => {
             contact me here."
             }
           </IntroSubText>
-          <GetStartedButton>{'Get Started'}</GetStartedButton>
+          <GetStartedButton>{'Contact Me'}</GetStartedButton>
         </IntroWrapper>
       </TopSection>
       <ServicesSection>

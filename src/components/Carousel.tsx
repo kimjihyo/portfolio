@@ -54,6 +54,7 @@ const ItemTitle = styled.div`
   text-align: center;
   color: #5b43d6;
   font-weight: 500;
+  margin-top: 1rem;
 `;
 
 const ItemDescription = styled.div`
@@ -121,8 +122,8 @@ const Carousel = (props: CarouselProps) => {
               src={item.img}
               alt=""
               style={{
-                width: '150px',
-                height: '150px',
+                width: '100px',
+                height: '100px',
               }}
             />
             <ItemTitle>{item.title}</ItemTitle>

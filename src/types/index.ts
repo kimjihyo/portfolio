@@ -33,6 +33,12 @@ export interface ProjectItemProps {
   duration: string;
   type: string;
   tag: string[];
+  buttons?: ProjectItemButtonProps[];
+}
+
+export interface ProjectItemButtonProps {
+  title: string;
+  onClick: () => void;
 }
 
 export interface NavigationItemProp {

@@ -60,6 +60,8 @@ const ProjectDescriptionContainer = styled.div`
   border-radius: 4px;
   padding: 1rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 `;
 const BottomProjectDescriptionSection = styled.div``;
 const BottomProjectTypeText = styled.div`
@@ -91,6 +93,28 @@ const BottomProjectDurationText = styled.div`
   font-weight: 500;
 `;
 
+const ProjectItemButtonsContainer = styled.div`
+  padding: 1rem 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+`;
+
+const ProjectItemButton = styled.div`
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 1rem;
+  border: 1px solid white;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #ffffff40;
+    transition: background-color 0.2s;
+  }
+`;
+
 const ProjectItem = (props: ProjectItemProps) => {
   const [descriptionVisible, setDescriptionVisible] = React.useState<boolean>(false);
   return (
@@ -107,7 +131,19 @@ const ProjectItem = (props: ProjectItemProps) => {
             ))}
           </>
         )}
-        {descriptionVisible && <ProjectDescriptionContainer>{props.description}</ProjectDescriptionContainer>}
+        {descriptionVisible && (
+          <ProjectDescriptionContainer>
+            {props.description}
+            <ProjectItemButtonsContainer>
+              {props.buttons !== undefined &&
+                props.buttons.map((item, i) => (
+                  <ProjectItemButton key={i} onClick={item.onClick}>
+                    {item.title}
+                  </ProjectItemButton>
+                ))}
+            </ProjectItemButtonsContainer>
+          </ProjectDescriptionContainer>
+        )}
       </ProjectImageSection>
       <BottomProjectDescriptionSection>
         <BottomProjectTypeText>{props.type}</BottomProjectTypeText>
