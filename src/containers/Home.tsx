@@ -86,28 +86,32 @@ const PortfolioSection = styled.div`
   border-top-width: 1px;
   border-top-color: gainsboro;
   border-top-style: solid;
-  padding-top: 60px;
+  padding-top: 4em;
 `;
 
 const PortfolioSectionTitle = styled.h1`
-  color: #00000055;
+  color: black;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+  font-weight: 900;
+  margin-bottom: 1.5em;
 `;
 
 const ProjectSection = styled.div`
   border-top-width: 1px;
   border-top-color: gainsboro;
   border-top-style: solid;
-  padding-top: 60px;
+  padding-top: 4em;
 `;
 
 const ProjectSectionTitle = styled.h1`
-  color: #00000055;
+  color: black;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+  font-weight: 900;
+  margin-bottom: 3em;
 `;
 
 const ProjectItemGrid = styled.div`
