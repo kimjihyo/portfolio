@@ -5,6 +5,7 @@ const colors = {
   primaryTextColor: '#5b43d6',
   primaryTextBackgroundColor: '#ded9ff',
   lightPrimaryTextBackgroundColor: '#f2f0ff',
+  primaryGreenColor: '#24cd77',
 };
 
 export { colors };

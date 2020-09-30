@@ -1,3 +1,22 @@
+export interface HeaderProps {
+  title: string;
+  navButtons: HeaderNavButtonProps[];
+  backgroundColor?: string;
+}
+
+export interface HeaderNavButtonProps {
+  title: string;
+  onClick: () => void;
+}
+
+export interface ProjectDetailsProps {
+  title: string;
+  description: string;
+  appLogoIconImage: string;
+  previewImages: string[];
+  downloadLink?: string;
+}
+
 export interface CarouselProps {
   items: CarouselItemProps[];
 }

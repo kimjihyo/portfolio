@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../constants';
 import { ReactComponent as MenuIcon } from '../assets/menu-white-18dp.svg';
-import { NavigationItemProp } from '../types';
+import { HeaderNavButtonProps, HeaderProps } from '../types';
+
+interface HeaderStyleProps {
+  scrolled: boolean;
+  backgroundColor?: string;
+}
 
 const Appbar = styled.div`
   z-index: 1;
@@ -13,7 +18,8 @@ const Appbar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${(props: { scrolled: boolean }) => {
+  background-color: ${(props) => props.backgroundColor};
+  ${(props: HeaderStyleProps) => {
     if (props.scrolled) {
       return `
         padding: 15px 0;
@@ -27,7 +33,7 @@ const Appbar = styled.div`
       return `
       `;
     }
-  }}
+  }};
 `;
 
 const Wrapper = styled.div`
@@ -118,21 +124,8 @@ const DrawerItem = styled.div`
   }
 `;
 
-const Header = () => {
-  const [navigationItems] = React.useState<NavigationItemProp[]>([
-    {
-      name: 'SKILLS',
-      onPress: () => console.log('SKILLS pressed'),
-    },
-    {
-      name: 'PROJECTS',
-      onPress: () => console.log('PORTFOLIO pressed'),
-    },
-    {
-      name: 'EXPERIENCE',
-      onPress: () => console.log('PRICING pressed'),
-    },
-  ]);
+const Header = (props: HeaderProps) => {
+  const [navigationItems] = React.useState<HeaderNavButtonProps[]>([...props.navButtons]);
 
   const [scrolled, setScrolled] = React.useState(false);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -161,10 +154,14 @@ const Header = () => {
   };
 
   return (
-    <Appbar scrolled={scrolled} style={drawerOpen ? expandedAppbarStyle : undefined}>
+    <Appbar
+      backgroundColor={props.backgroundColor}
+      scrolled={scrolled}
+      style={drawerOpen ? expandedAppbarStyle : undefined}
+    >
       <Wrapper>
         <TitleColumn>
-          <Title>jihyo.com</Title>
+          <Title>{props.title}</Title>
           <ConnectionStatus>
             <ConnectionIndicator />
             Online
@@ -175,16 +172,16 @@ const Header = () => {
             <MenuIcon width="100%" height="100%" />
           </DrawerButton>
           {navigationItems.map((item, i) => (
-            <NavigationButton key={i} onClick={item.onPress}>
-              {item.name}
+            <NavigationButton key={i} onClick={item.onClick}>
+              {item.title}
             </NavigationButton>
           ))}
         </NavigationButtonsWrapper>
       </Wrapper>
       <Drawer style={!drawerOpen ? { display: 'none' } : undefined}>
         {navigationItems.map((item, i) => (
-          <DrawerItem key={i} onClick={item.onPress}>
-            {item.name}
+          <DrawerItem key={i} onClick={item.onClick}>
+            {item.title}
           </DrawerItem>
         ))}
       </Drawer>

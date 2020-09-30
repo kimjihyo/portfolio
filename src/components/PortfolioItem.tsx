@@ -113,13 +113,6 @@ const PortfolioItem = (props: PortfolioItemProps) => {
         <Description>{props.description}</Description>
         <Buttons>
           <Button
-            style={{ backgroundColor: colors.primaryColor1, color: 'white' }}
-            label="Preview"
-            onClick={() => {
-              console.log('Preview');
-            }}
-          />
-          <Button
             style={{ marginLeft: '10px' }}
             label="Visit Site"
             onClick={() => {

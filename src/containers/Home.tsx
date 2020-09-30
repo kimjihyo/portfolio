@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem } from '../components';
-import { CarouselItemProps, PortfolioItemProps, ProjectItemProps } from '../types';
+import { CarouselItemProps, HeaderProps, PortfolioItemProps, ProjectItemProps } from '../types';
 import { colors } from '../constants';
 
 const Wrapper = styled.div``;
@@ -90,7 +90,7 @@ const PortfolioSection = styled.div`
 `;
 
 const PortfolioSectionTitle = styled.h1`
-  color: black;
+  color: #00000045;
   text-transform: uppercase;
   font-size: 22px;
   text-align: center;
@@ -106,7 +106,7 @@ const ProjectSection = styled.div`
 `;
 
 const ProjectSectionTitle = styled.h1`
-  color: black;
+  color: #00000045;
   text-transform: uppercase;
   font-size: 22px;
   text-align: center;
@@ -136,6 +136,24 @@ const ProjectItemGrid = styled.div`
 `;
 
 const Home = () => {
+  const [headerProps] = React.useState<HeaderProps>({
+    title: 'jihyo.com',
+    navButtons: [
+      {
+        title: 'SKILLS',
+        onClick: () => console.log('Skills Clicked'),
+      },
+      {
+        title: 'PROJECTS',
+        onClick: () => console.log('Skills Clicked'),
+      },
+      {
+        title: 'EXPERIENCE',
+        onClick: () => console.log('Skills Clicked'),
+      },
+    ],
+  });
+
   const [serviceItems] = React.useState<CarouselItemProps[]>([
     {
       img: require('../assets/react.png'),
@@ -167,6 +185,12 @@ const Home = () => {
       shortDescription: 'Outsourcing',
       type: 'Mobile Application',
       tag: ['Full-Stack', 'React Native', 'AI'],
+      buttons: [
+        {
+          title: 'Previews',
+          onClick: () => (window.location.href = '/projects/bullstocksai'),
+        },
+      ],
     },
     {
       img: require('../assets/iro.png'),
@@ -181,6 +205,10 @@ const Home = () => {
       type: 'Mobile Application',
       tag: ['Full-Stack', 'React-Native'],
       buttons: [
+        {
+          title: 'Previews',
+          onClick: () => (window.location.href = '/projects/pethealthanalyzer'),
+        },
         {
           title: 'Google Play Store',
           onClick: () => {
@@ -200,12 +228,6 @@ const Home = () => {
       type: 'Web Application',
       tag: ['Frontend', 'React.js'],
       buttons: [
-        {
-          title: 'View the Website',
-          onClick: () => {
-            window.open('https://wwwn.naver.com');
-          },
-        },
         {
           title: 'View Source Code',
           onClick: () => {
@@ -360,7 +382,7 @@ const Home = () => {
   return (
     <Wrapper>
       <TopSection>
-        <Header />
+        <Header {...headerProps} />
         <IntroWrapper>
           <IntroMainText>
             AI RESEARCH & <br /> MOBILE / WEB / GAME DEVELOPMENT
