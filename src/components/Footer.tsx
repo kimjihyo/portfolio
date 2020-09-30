@@ -30,11 +30,11 @@ const Footer = () => {
   return (
     <Wrapper>
       <Links>
-        <Link href="#">Email</Link>
-        <Link href="#">Linkedin</Link>
-        <Link href="#">Facebook</Link>
-        <Link href="#">GitHub</Link>
-        <Link href="#">Instagram</Link>
+        <Link href="mailto:kimjihyo0325@gmail.com">Email</Link>
+        <Link href="https://www.linkedin.com/in/jihyo-kim-084338156/">Linkedin</Link>
+        <Link href="https://www.facebook.com/profile.php?id=100006776461314">Facebook</Link>
+        <Link href="https://github.com/kimjihyo">GitHub</Link>
+        <Link href="https://www.instagram.com/kimjihyo0325/">Instagram</Link>
       </Links>
       <FooterText>Created from scratch with React by Jihyo Kim in 2020.</FooterText>
     </Wrapper>

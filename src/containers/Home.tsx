@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem } from '../components';
+import { Header, Carousel, PortfolioItem, Footer, ProjectItem, EmptyProjectItem } from '../components';
 import { CarouselItemProps, HeaderProps, PortfolioItemProps, ProjectItemProps } from '../types';
 import { colors } from '../constants';
 
@@ -68,6 +68,7 @@ const GetStartedButton = styled.a`
   padding: 12px 30px;
   border-radius: 30px;
   font-weight: 500;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
   }
@@ -79,7 +80,7 @@ const ServicesSection = styled.div`
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  height: 550px;
+  height: 450px;
 `;
 
 const PortfolioSection = styled.div`
@@ -109,6 +110,14 @@ const ProjectSectionTitle = styled.h1`
   color: #00000045;
   text-transform: uppercase;
   font-size: 22px;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+`;
+
+const ProjectSectionSubtitle = styled.h2`
+  color: #00000045;
+  font-size: 18px;
   text-align: center;
   font-weight: 900;
   margin-bottom: 3em;
@@ -141,15 +150,15 @@ const Home = () => {
     navButtons: [
       {
         title: 'SKILLS',
-        onClick: () => console.log('Skills Clicked'),
+        onClick: () => (window.location.href = '#skills'),
       },
       {
         title: 'PROJECTS',
-        onClick: () => console.log('Skills Clicked'),
+        onClick: () => (window.location.href = '#projects'),
       },
       {
         title: 'EXPERIENCE',
-        onClick: () => console.log('Skills Clicked'),
+        onClick: () => (window.location.href = '#experience'),
       },
     ],
   });
@@ -158,17 +167,30 @@ const Home = () => {
     {
       img: require('../assets/react.png'),
       title: 'React/React Native',
-      description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
+      description:
+        'I am able to create any mobile or web applications using React and React Native. \
+      I like to use React with Styled-Components and Context API',
     },
     {
       img: require('../assets/node.png'),
       title: 'Node.js/Express',
-      description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
+      description:
+        'I have a good understanding of Node servers. I am able to create \
+      simple REST APIs using Express',
     },
     {
-      img: require('../assets/xcode.png'),
-      title: 'iOS Development',
-      description: 'Integration of eCommerce platforms, payment gateways, custom product templates, and more.',
+      img: require('../assets/undraw_mobile_images.svg'),
+      title: 'Native App Development',
+      description:
+        'I am currently learning iOS UIKit and Native Android. Not an expert at it, but able to create \
+      simple native iOS/Android apps',
+    },
+    {
+      img: require('../assets/undraw_no_data.svg'),
+      title: 'And More...',
+      description:
+        'I am also cabale of developing software using various tech stacks, \
+      including Go Lang, Flutter/Dart, Django, C/C++... I am a fast learner and always look for something to learn',
     },
   ]);
 
@@ -231,7 +253,7 @@ const Home = () => {
         {
           title: 'View Source Code',
           onClick: () => {
-            window.open('https://wwwn.naver.com');
+            window.open('https://github.com/kimjihyo/portfolio');
           },
         },
       ],
@@ -265,7 +287,7 @@ const Home = () => {
         {
           title: 'View Source Code',
           onClick: () => {
-            window.open('https://jijuntay-minesweeper.web.app/');
+            window.open('https://github.com/kimjihyo/Gomoku');
           },
         },
       ],
@@ -291,7 +313,7 @@ const Home = () => {
         {
           title: 'View Source Code',
           onClick: () => {
-            window.open('https://jijuntay-minesweeper.web.app/');
+            window.open('https://github.com/kimjihyo/minesweeper_bcit');
           },
         },
       ],
@@ -311,7 +333,7 @@ const Home = () => {
         {
           title: 'Play Game',
           onClick: () => {
-            window.open('https://www.naver.com');
+            window.open('http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/');
           },
         },
       ],
@@ -332,7 +354,7 @@ const Home = () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
       },
       onVisitSitePress: () => {
-        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+        window.open('https://realtor.com');
       },
     },
     {
@@ -348,7 +370,7 @@ const Home = () => {
         console.log('Stock Market Predictor iOS App Preview Pressed');
       },
       onVisitSitePress: () => {
-        console.log('Stock Market Predictor iOS App Visit Site Pressed');
+        window.open('https://base.town/');
       },
     },
   ]);
@@ -394,15 +416,15 @@ const Home = () => {
             contact me here."
             }
           </IntroSubText>
-          <GetStartedButton>{'Contact Me'}</GetStartedButton>
+          <GetStartedButton href="mailto:kimjihyo0325@gmail.com">{'Contact Me'}</GetStartedButton>
         </IntroWrapper>
       </TopSection>
-      <ServicesSection>
+      <ServicesSection id="skills">
         <Carousel items={serviceItems} />
-        <Button label="Learn More" onClick={() => console.log('Learn More')} />
       </ServicesSection>
-      <ProjectSection>
+      <ProjectSection id="projects">
         <ProjectSectionTitle>Recent Projects</ProjectSectionTitle>
+        <ProjectSectionSubtitle>Please click cards to view more details</ProjectSectionSubtitle>
         <ProjectItemGrid>
           {projectItems.map((item, i) => (
             <ProjectItem key={i} {...item} />
@@ -412,7 +434,7 @@ const Home = () => {
           ))}
         </ProjectItemGrid>
       </ProjectSection>
-      <PortfolioSection>
+      <PortfolioSection id="experience">
         <PortfolioSectionTitle>Work Experience</PortfolioSectionTitle>
         {portfolioItems.map((item, i) => (
           <PortfolioItem key={i} {...item} />

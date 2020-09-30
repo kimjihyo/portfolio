@@ -112,13 +112,7 @@ const PortfolioItem = (props: PortfolioItemProps) => {
         <JobTitleText>{props.jobTitle}</JobTitleText>
         <Description>{props.description}</Description>
         <Buttons>
-          <Button
-            style={{ marginLeft: '10px' }}
-            label="Visit Site"
-            onClick={() => {
-              console.log('Preview');
-            }}
-          />
+          <Button style={{ marginLeft: '10px' }} label="Visit Site" onClick={props.onVisitSitePress} />
         </Buttons>
       </DescriptionColumn>
     </Wrapper>

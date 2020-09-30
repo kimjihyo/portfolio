@@ -43,7 +43,7 @@ const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 300px;
   min-width: 300px;
   transition: transform 0.4s;
