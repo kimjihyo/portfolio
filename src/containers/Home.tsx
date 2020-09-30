@@ -146,7 +146,7 @@ const ProjectItemGrid = styled.div`
 
 const Home = () => {
   const [headerProps] = React.useState<HeaderProps>({
-    title: 'jihyo.com',
+    title: `jihyo's portfolio`,
     navButtons: [
       {
         title: 'SKILLS',
