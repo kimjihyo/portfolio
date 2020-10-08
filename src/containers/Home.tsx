@@ -142,6 +142,9 @@ const ProjectItemGrid = styled.div`
   @media (max-width: 700px) {
     grid-template-columns: 1fr 1fr;
   }
+  /* @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  } */
 `;
 
 const Home = () => {
@@ -407,7 +410,8 @@ const Home = () => {
         <Header {...headerProps} />
         <IntroWrapper>
           <IntroMainText>
-            AI RESEARCH & <br /> MOBILE / WEB / GAME DEVELOPMENT
+            AI RESEARCH &<br />
+            MOBILE / WEB / GAME DEVELOPMENT
           </IntroMainText>
           <IntroSubText>
             {

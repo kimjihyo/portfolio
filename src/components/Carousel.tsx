@@ -9,9 +9,8 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   padding: 20px 0px;
-  position: relative;
 `;
 
 const ItemContainer = styled.div`
@@ -74,14 +73,6 @@ const ArrowRight = styled(ChevronRight)`
   }
 `;
 
-const ArrowContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 0.1;
-`;
-
 const ArrowLeft = styled(ChevronLeft)`
   fill: #00000030;
   &:hover {
@@ -112,9 +103,7 @@ const Carousel = (props: CarouselProps) => {
 
   return (
     <Wrapper>
-      <ArrowContainer>
-        <ArrowLeft width="80px" height="80px" onClick={onLeftArrowPress} />
-      </ArrowContainer>
+      <ArrowLeft width="80px" height="80px" onClick={onLeftArrowPress} />
       <ItemContainer>
         {props.items.map((item, i) => (
           <Item key={i} style={translateXStyle(carouselTransitionX)}>
@@ -131,9 +120,7 @@ const Carousel = (props: CarouselProps) => {
           </Item>
         ))}
       </ItemContainer>
-      <ArrowContainer>
-        <ArrowRight width="80px" height="80px" onClick={onRightArrowPress} />
-      </ArrowContainer>
+      <ArrowRight width="80px" height="80px" onClick={onRightArrowPress} />
     </Wrapper>
   );
 };
