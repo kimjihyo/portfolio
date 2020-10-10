@@ -46,7 +46,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   color: white;
   font-size: 19px;
-  font-weight: 900;
+  font-weight: 700;
   @media (max-width: 600px) {
     font-size: 16px;
   }
@@ -90,6 +90,7 @@ const NavigationButtonsWrapper = styled.div`
 const NavigationButton = styled.span`
   color: white;
   padding-left: 20px;
+  font-weight: bold;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 15px;

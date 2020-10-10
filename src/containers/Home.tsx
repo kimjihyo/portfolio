@@ -35,7 +35,7 @@ const IntroWrapper = styled.div`
 const IntroMainText = styled.h1`
   text-align: center;
   color: white;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -102,7 +102,7 @@ const PortfolioSection = styled.div`
 `;
 
 const PortfolioSectionTitle = styled.h1`
-  color: #00000045;
+  color: ${colors.gray};
   text-transform: uppercase;
   font-size: 22px;
   text-align: center;
@@ -121,7 +121,7 @@ const ProjectSection = styled.div`
 `;
 
 const ProjectSectionTitle = styled.h1`
-  color: #00000045;
+  color: ${colors.gray};
   text-transform: uppercase;
   font-size: 22px;
   text-align: center;
@@ -133,7 +133,7 @@ const ProjectSectionTitle = styled.h1`
 `;
 
 const ProjectSectionSubtitle = styled.h2`
-  color: #00000045;
+  color: ${colors.lightGray};
   font-size: 18px;
   text-align: center;
   font-weight: 900;
@@ -253,7 +253,7 @@ const Home = () => {
           onClick: () => (window.location.href = '/projects/pethealthanalyzer'),
         },
         {
-          title: 'Google Play Store',
+          title: 'Download',
           onClick: () => {
             window.open('https://play.google.com/store/apps/details?id=com.animalheartratemonitoringapp&hl=ko');
           },
@@ -272,7 +272,7 @@ const Home = () => {
       tag: ['Frontend', 'React.js'],
       buttons: [
         {
-          title: 'View Source Code',
+          title: 'Github',
           onClick: () => {
             window.open('https://github.com/kimjihyo/portfolio');
           },
@@ -306,7 +306,7 @@ const Home = () => {
       tag: ['C++/SFML', 'Game'],
       buttons: [
         {
-          title: 'View Source Code',
+          title: 'Github',
           onClick: () => {
             window.open('https://github.com/kimjihyo/Gomoku');
           },
@@ -332,7 +332,7 @@ const Home = () => {
           },
         },
         {
-          title: 'View Source Code',
+          title: 'Github',
           onClick: () => {
             window.open('https://github.com/kimjihyo/minesweeper_bcit');
           },

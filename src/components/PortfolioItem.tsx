@@ -21,8 +21,8 @@ const Wrapper = styled.div`
 const ImageColumn = styled.div`
   object-fit: scale-down;
   margin: auto 0;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 400px;
+  max-height: 400px;
   @media (max-width: 1000px) {
     padding-bottom: 20px;
   }
@@ -52,6 +52,7 @@ const TitleRow = styled.div`
 `;
 
 const Title = styled.div`
+  color: ${colors.black};
   font-size: 25px;
   font-weight: bolder;
   @media (max-width: 1000px) {

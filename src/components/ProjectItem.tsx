@@ -34,7 +34,10 @@ const ProjectImageSection = styled.div`
   &:hover {
     cursor: pointer;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
+    height: 250px;
+  }
+  @media (max-width: 700px) {
     height: 200px;
   }
 `;
@@ -64,13 +67,10 @@ const ProjectDescriptionContainer = styled.div`
   letter-spacing: -0.5px;
   line-height: 1.35;
   border-radius: 4px;
-  padding: 1rem;
+  padding: 10%;
   /* overflow-y: auto; */
   display: flex;
   flex-direction: column;
-  @media (max-width: 600px) {
-    font-size: 12px;
-  }
 `;
 const BottomProjectDescriptionSection = styled.div``;
 const BottomProjectTypeText = styled.div`
@@ -84,7 +84,7 @@ const BottomProjectTypeText = styled.div`
 `;
 const BottomProjectTitleText = styled.div`
   overflow: hidden;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.5px;
   line-height: 0.9;
@@ -115,14 +115,17 @@ const BottomProjectDurationText = styled.div`
 `;
 
 const ProjectDescriptionText = styled.div`
+  flex: 0.5;
   overflow-y: hidden;
-  font-size: 12px;
+  font-size: 14px;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const ProjectItemButtonsContainer = styled.div`
-  padding: 1rem 0;
   display: flex;
-  flex: 1;
+  flex: 0.5;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
@@ -134,7 +137,13 @@ const ProjectItemButton = styled.div`
   padding: 0.25rem 1rem;
   border: 2.5px solid white;
   border-radius: 8px;
-  font-weight: 900;
+  font-weight: 600;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+    font-weight: 500;
+    border: 1.5px solid white;
+  }
 
   &:hover {
     background-color: #ffffff40;
