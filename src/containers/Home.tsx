@@ -244,7 +244,7 @@ const Home = () => {
             contact me here."
             }
           </IntroSubText>
-          <GetStartedButton href="mailto:kimjihyo0325@gmail.com">{'Contact Me'}</GetStartedButton>
+          <GetStartedButton href="#getintouch">{'Contact Me'}</GetStartedButton>
         </IntroWrapper>
       </TopSection>
       <ServicesSection id="skills">
@@ -268,7 +268,7 @@ const Home = () => {
           <PortfolioItem key={i} {...item} />
         ))}
       </PortfolioSection>
-      <GetInTouchSection>
+      <GetInTouchSection id="getintouch">
         <GetInTouchSectionTitle>Get in touch</GetInTouchSectionTitle>
         <ContactMeForm />
       </GetInTouchSection>
