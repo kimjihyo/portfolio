@@ -5,5 +5,6 @@ import PortfolioItem from './PortfolioItem';
 import Footer from './Footer';
 import ProjectItem from './ProjectItem';
 import EmptyProjectItem from './EmptyProjectItem';
+import ContactMeForm from './ContactMeForm';
 
-export { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem };
+export { Header, Carousel, Button, PortfolioItem, Footer, ProjectItem, EmptyProjectItem, ContactMeForm };
