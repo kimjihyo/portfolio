@@ -26,6 +26,9 @@ const ImageColumn = styled.div`
   @media (max-width: 1000px) {
     padding-bottom: 20px;
   }
+  @media (max-width: 600px) {
+    width: 70%;
+  }
 `;
 
 const DescriptionColumn = styled.div`
@@ -54,6 +57,9 @@ const Title = styled.div`
   @media (max-width: 1000px) {
     font-size: 20px;
   }
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 const YearBadge = styled.div`
@@ -66,6 +72,9 @@ const YearBadge = styled.div`
   border-radius: 10px;
   padding: 5px 10px;
   margin-left: 10px;
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 
 const Description = styled.div`
@@ -76,11 +85,17 @@ const Description = styled.div`
   @media (max-width: 1000px) {
     font-size: 15px;
   }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const JobTitleText = styled.div`
@@ -89,6 +104,9 @@ const JobTitleText = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.primaryTextColor};
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const PortfolioItem = (props: PortfolioItemProps) => {

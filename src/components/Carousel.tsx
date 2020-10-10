@@ -54,6 +54,9 @@ const ItemTitle = styled.div`
   color: #5b43d6;
   font-weight: 500;
   margin-top: 1rem;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 const ItemDescription = styled.div`
@@ -62,6 +65,9 @@ const ItemDescription = styled.div`
   padding: 0 20px;
   padding-top: 20px;
   color: #212529;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const ArrowRight = styled(ChevronRight)`

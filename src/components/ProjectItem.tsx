@@ -34,6 +34,9 @@ const ProjectImageSection = styled.div`
   &:hover {
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    height: 200px;
+  }
 `;
 const ProjectTag = styled.div`
   font-weight: 800;
@@ -45,6 +48,9 @@ const ProjectTag = styled.div`
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 30px 3px;
   text-transform: uppercase;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 const ProjectDescriptionContainer = styled.div`
   position: absolute;
@@ -62,6 +68,9 @@ const ProjectDescriptionContainer = styled.div`
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 const BottomProjectDescriptionSection = styled.div``;
 const BottomProjectTypeText = styled.div`
@@ -69,6 +78,9 @@ const BottomProjectTypeText = styled.div`
   font-size: 12px;
   color: ${colors.primaryTextColor};
   margin-bottom: 0.25rem;
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 const BottomProjectTitleText = styled.div`
   overflow: hidden;
@@ -77,6 +89,9 @@ const BottomProjectTitleText = styled.div`
   letter-spacing: -0.5px;
   line-height: 0.9;
   margin-bottom: 0.7rem;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 const BottomProjectBreifDescriptionText = styled.div`
   font-size: 12px;
@@ -84,6 +99,9 @@ const BottomProjectBreifDescriptionText = styled.div`
   width: fit-content;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 const BottomProjectDurationText = styled.div`
   font-size: 12px;
@@ -91,6 +109,9 @@ const BottomProjectDurationText = styled.div`
   width: fit-content;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 500;
+  @media (max-width: 600px) {
+    font-size: 10px;
+  }
 `;
 
 const ProjectItemButtonsContainer = styled.div`

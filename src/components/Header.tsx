@@ -47,6 +47,9 @@ const Title = styled.h1`
   color: white;
   font-size: 19px;
   font-weight: 900;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleColumn = styled.div`
@@ -57,8 +60,8 @@ const TitleColumn = styled.div`
 const ConnectionIndicator = styled.div`
   border-radius: 100%;
   background-color: lime;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 `;
 
 const ConnectionStatus = styled.div`
@@ -73,6 +76,9 @@ const ConnectionStatus = styled.div`
   border-radius: 200px;
   margin-left: 10px;
   text-transform: uppercase;
+  @media (max-width: 600px) {
+    font-size: 8px;
+  }
 `;
 
 const NavigationButtonsWrapper = styled.div`

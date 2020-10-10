@@ -15,6 +15,9 @@ const ProjectImageSection = styled.div`
   padding: 1rem;
   margin-bottom: 0.75rem;
   border-radius: 4px;
+  @media (max-width: 600px) {
+    height: 200px;
+  }
 `;
 const BottomProjectDescriptionSection = styled.div``;
 const BottomProjectTypeText = styled.div`

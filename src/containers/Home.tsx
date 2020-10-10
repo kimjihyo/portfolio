@@ -45,6 +45,9 @@ const IntroMainText = styled.h1`
   @media (max-width: 700px) {
     font-size: 20px;
   }
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const IntroSubText = styled.p`
@@ -54,8 +57,13 @@ const IntroSubText = styled.p`
   max-width: 480px;
   margin-bottom: 30px;
   text-align: center;
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     font-size: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -71,6 +79,9 @@ const GetStartedButton = styled.a`
   text-decoration: none;
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 `;
 
@@ -97,6 +108,9 @@ const PortfolioSectionTitle = styled.h1`
   text-align: center;
   font-weight: 900;
   margin-bottom: 1.5em;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const ProjectSection = styled.div`
@@ -113,6 +127,9 @@ const ProjectSectionTitle = styled.h1`
   text-align: center;
   font-weight: 900;
   margin-bottom: 0.5em;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const ProjectSectionSubtitle = styled.h2`
@@ -121,6 +138,9 @@ const ProjectSectionSubtitle = styled.h2`
   text-align: center;
   font-weight: 900;
   margin-bottom: 3em;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const ProjectItemGrid = styled.div`
