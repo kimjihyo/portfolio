@@ -146,8 +146,10 @@ const ProjectItemButton = styled.div`
   }
 
   &:hover {
-    background-color: #ffffff40;
-    transition: background-color 0.2s;
+    // background-color: #ffffff40;
+    transition: background-color 0.1s, color 0.1s;
+    background-color: white;
+    color: ${colors.black};
   }
 `;
 
