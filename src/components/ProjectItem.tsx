@@ -39,7 +39,7 @@ const ProjectImageSection = styled.div`
   }
 `;
 const ProjectTag = styled.div`
-  font-weight: 800;
+  font-weight: 900;
   background-color: white;
   width: fit-content;
   margin-bottom: 0.5rem;
@@ -65,7 +65,7 @@ const ProjectDescriptionContainer = styled.div`
   line-height: 1.35;
   border-radius: 4px;
   padding: 1rem;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   display: flex;
   flex-direction: column;
   @media (max-width: 600px) {
@@ -114,6 +114,11 @@ const BottomProjectDurationText = styled.div`
   }
 `;
 
+const ProjectDescriptionText = styled.div`
+  overflow-y: hidden;
+  font-size: 12px;
+`;
+
 const ProjectItemButtonsContainer = styled.div`
   padding: 1rem 0;
   display: flex;
@@ -127,8 +132,9 @@ const ProjectItemButton = styled.div`
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.25rem 1rem;
-  border: 1px solid white;
+  border: 2.5px solid white;
   border-radius: 8px;
+  font-weight: 900;
 
   &:hover {
     background-color: #ffffff40;
@@ -154,7 +160,7 @@ const ProjectItem = (props: ProjectItemProps) => {
         )}
         {descriptionVisible && (
           <ProjectDescriptionContainer>
-            {props.description}
+            <ProjectDescriptionText>{props.description}</ProjectDescriptionText>
             <ProjectItemButtonsContainer>
               {props.buttons !== undefined &&
                 props.buttons.map((item, i) => (
