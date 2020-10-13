@@ -17,6 +17,11 @@ export interface ProjectDetailsProps {
   downloadLink?: string;
 }
 
+export interface ProjectDetailsRouteProps {
+  route: string;
+  projectDetails: ProjectDetailsProps;
+}
+
 export interface CarouselProps {
   items: CarouselItemProps[];
 }

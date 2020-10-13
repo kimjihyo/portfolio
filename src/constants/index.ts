@@ -1,4 +1,4 @@
-import { serviceItems, projectItems, portfolioItems } from './items';
+import { serviceItems, projectItems, portfolioItems, projectDetailsRoutes } from './items';
 
 const colors = {
   primaryColor1: '#4A4090',
@@ -13,4 +13,4 @@ const colors = {
   lightGray: '#9e9e9e',
 };
 
-export { colors, serviceItems, projectItems, portfolioItems };
+export { colors, serviceItems, projectItems, portfolioItems, projectDetailsRoutes };
