@@ -177,7 +177,7 @@ const GetInTouchSectionTitle = styled.div`
   font-size: 22px;
   text-align: center;
   font-weight: 900;
-  margin-bottom: 0.5em;
+  margin-bottom: 2em;
   @media (max-width: 600px) {
     font-size: 16px;
   }
@@ -233,10 +233,7 @@ const Home = () => {
       <TopSection>
         <Header {...headerProps} />
         <IntroWrapper>
-          <IntroMainText>
-            AI RESEARCH &<br />
-            MOBILE / WEB / GAME DEVELOPMENT
-          </IntroMainText>
+          <IntroMainText>MOBILE & WEB & GAME DEVELOPMENT</IntroMainText>
           <IntroSubText>
             {
               "Hi, I am Jihyo Kim. I am specializing in mobile & web development. \

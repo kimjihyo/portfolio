@@ -64,7 +64,8 @@ const ItemDescription = styled.div`
   line-height: 1.5;
   padding: 0 20px;
   padding-top: 20px;
-  color: #212529;
+  color: ${colors.black};
+  font-size: 14px;
   @media (max-width: 600px) {
     font-size: 12px;
   }
@@ -117,8 +118,8 @@ const Carousel = (props: CarouselProps) => {
               src={item.img}
               alt=""
               style={{
-                width: '100px',
-                height: '100px',
+                width: '90px',
+                height: '90px',
               }}
             />
             <ItemTitle>{item.title}</ItemTitle>

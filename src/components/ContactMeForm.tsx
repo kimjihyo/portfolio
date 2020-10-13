@@ -50,6 +50,7 @@ const MessageField = styled.textarea`
   line-height: 1.5;
   color: #495057;
   outline: none;
+  resize: none;
 `;
 
 const Label = styled.span`

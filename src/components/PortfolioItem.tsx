@@ -53,7 +53,7 @@ const TitleRow = styled.div`
 
 const Title = styled.div`
   color: ${colors.black};
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bolder;
   @media (max-width: 1000px) {
     font-size: 20px;

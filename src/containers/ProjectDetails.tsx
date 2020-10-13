@@ -30,6 +30,10 @@ const AppLogo = styled.img`
   width: 170px;
   height: 170px;
   margin-right: 1rem;
+  @media (max-width: 700px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 const PreviewImage = styled.img`
@@ -49,10 +53,16 @@ const TopAppInfoTextsWrapper = styled.div``;
 
 const AppTitleText = styled.div`
   font-size: 26px;
+  @media (max-width: 700px) {
+    font-size: 22px;
+  }
 `;
 
 const ProjectDateText = styled.div`
   color: gray;
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
 `;
 
 const DownloadButton = styled.div`
@@ -64,6 +74,9 @@ const DownloadButton = styled.div`
   overflow-x: hidden;
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    font-size: 14px;
   }
 `;
 
@@ -95,8 +108,15 @@ const AppDetailedDescriptionTitle = styled.div`
   color: #666;
   margin-bottom: 1rem;
   font-size: 18px;
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
 `;
-const AppDetailedDescriptionText = styled.div``;
+const AppDetailedDescriptionText = styled.div`
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+`;
 
 const ProjectDetails = (props: ProjectDetailsProps) => {
   const [headerProps] = React.useState<HeaderProps>({
