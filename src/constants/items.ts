@@ -222,7 +222,37 @@ const projectItems: ProjectItemProps[] = [
       {
         title: 'Play Game',
         onClick: () => {
-          window.open('http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/');
+          window.open(
+            'http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/assignment1/index.html',
+          );
+        },
+      },
+    ],
+  },
+  {
+    img: require('../assets/slidng_effect.png'),
+    title: 'Sliding Effect',
+    description:
+      'Gomoku, also called Five in a Row, is an abbstract strategy board game ' +
+      'It is traditionally payed with Go pieces on a Go board. I created the game ' +
+      'with C++ and SFML, which is a wrapper library for OpenGL.',
+    duration: '2020.11 ~ 2020.11',
+    shortDescription: 'Personal Project',
+    type: 'HTML5 Canvas',
+    tag: ['Plain JS', 'Canvas'],
+    buttons: [
+      {
+        title: 'Demo',
+        onClick: () => {
+          window.open(
+            'http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/assignment1/index.html',
+          );
+        },
+      },
+      {
+        title: 'Github',
+        onClick: () => {
+          window.open('https://github.com/kimjihyo/slidingeffect');
         },
       },
     ],
