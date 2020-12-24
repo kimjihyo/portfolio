@@ -257,6 +257,62 @@ const projectItems: ProjectItemProps[] = [
       },
     ],
   },
+  {
+    img: require('../assets/abalone.png'),
+    title: 'Abalone AI',
+    description:
+      'Gomoku, also called Five in a Row, is an abbstract strategy board game ' +
+      'It is traditionally payed with Go pieces on a Go board. I created the game ' +
+      'with C++ and SFML, which is a wrapper library for OpenGL.',
+    duration: '2020.11 ~ 2020.11',
+    shortDescription: 'Academic Project',
+    type: 'HTML5 Canvas',
+    tag: ['React', 'Board Game AI'],
+    buttons: [
+      {
+        title: 'Demo',
+        onClick: () => {
+          window.open(
+            'http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/assignment1/index.html',
+          );
+        },
+      },
+      {
+        title: 'Github',
+        onClick: () => {
+          window.open('https://github.com/kimjihyo/slidingeffect');
+        },
+      },
+    ],
+  },
+  {
+    img: require('../assets/notebook.png'),
+    title: 'Notebook',
+    description:
+      'Gomoku, also called Five in a Row, is an abbstract strategy board game ' +
+      'It is traditionally payed with Go pieces on a Go board. I created the game ' +
+      'with C++ and SFML, which is a wrapper library for OpenGL.',
+    duration: '2020.12 ~ 2020.12',
+    shortDescription: 'Personal Project',
+    type: 'React.js',
+    tag: ['React.js', 'Personal Website'],
+    buttons: [
+      {
+        title: 'Demo',
+        onClick: () => {
+          window.open(
+            'http://ec2-34-221-213-252.us-west-2.compute.amazonaws.com/comp4537/assignments/assignment1/index.html',
+          );
+        },
+      },
+      {
+        title: 'Github',
+        onClick: () => {
+          window.open('https://github.com/kimjihyo/slidingeffect');
+        },
+      },
+    ],
+  },
 ];
 
 const portfolioItems: PortfolioItemProps[] = [
